@@ -6,10 +6,10 @@
 </template>
 
 <script setup lang="ts">
-import { useMainStore } from '@/store/main'
+import { useUserStore } from '@/store'
 import { NButton } from 'naive-ui'
 
-const mainStore = useMainStore()
+const mainStore = useUserStore()
 
 const updateName = () => {
   // $patch 修改 store 中的数据
