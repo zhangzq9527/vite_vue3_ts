@@ -23,13 +23,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "@/assets/style/mian.scss";',
-      },
-    },
-  },
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: '@import "@/assets/style/mian.scss";',
+  //     },
+  //   },
+  // },
   //启动服务配置
   server: {
     host: '0.0.0.0',
