@@ -30,7 +30,9 @@
 import { reactive, ref } from 'vue'
 import { Avatar, Lock } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
+import { useUserStore } from '../../store/index'
 
+const userStore = useUserStore()
 const loginForm = reactive({
   username: '',
   password: '',
@@ -56,6 +58,7 @@ const loading = ref(false)
 
 const submitLogin = async () => {
   loading.value = true
+  const res = await userStore.login(loginForm)
 }
 </script>
 

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import fetchApi from '../../service/api/login/login'
 
 export const useUserStore = defineStore({
   id: 'mian',
@@ -10,10 +11,8 @@ export const useUserStore = defineStore({
     nameLength: (state) => state.name.length,
   },
   actions: {
-    async insertPost(data: string) {
-      // 可以做异步
-      // await doAjaxRequest(data);
-      this.name = data
+    async login(params: any) {
+      const res = await fetchApi.login(params)
     },
   },
 })

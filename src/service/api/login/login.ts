@@ -1,9 +1,9 @@
-import http from '@/service/http'
-import * as T from './types'
+import { get, post } from '../../http'
 
-const loginApi: T.ILoginApi = {
-  login(params) {
-    return http.post('/login', params)
-  },
+enum URL {
+  login = '/v1/user/login',
 }
-export default loginApi
+
+const login = async (data: any) => post<any>({ url: URL.login, data })
+
+export default { login }
