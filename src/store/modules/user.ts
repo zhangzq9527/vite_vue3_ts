@@ -13,6 +13,7 @@ export const useUserStore = defineStore({
   actions: {
     async login(params: any) {
       const res = await fetchApi.login(params)
+      return res
     },
   },
 })

@@ -59,6 +59,7 @@ const loading = ref(false)
 const submitLogin = async () => {
   loading.value = true
   const res = await userStore.login(loginForm)
+  console.log(res)
 }
 </script>
 

@@ -1,9 +1,8 @@
-import { get, post } from '../../http'
+import { post } from '../../http'
 
 enum URL {
-  login = '/v1/user/login',
+  login = '/user/login',
 }
-
-const login = async (data: any) => post<any>({ url: URL.login, data })
+const login = async (data: any) => post(URL.login, data)
 
 export default { login }
