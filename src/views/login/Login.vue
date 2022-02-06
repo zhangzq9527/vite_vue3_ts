@@ -57,6 +57,7 @@ const rules = reactive({
 const loading = ref(false)
 
 const submitLogin = async () => {
+  await loginFormRules.value.validate()
   loading.value = true
   const res = await userStore.login(loginForm)
   console.log(res)
