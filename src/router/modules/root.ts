@@ -6,6 +6,11 @@ const routers: RouteRecordRaw[] = [
     name: 'Login',
     component: () => import('@/views/login/Login.vue'),
   },
+  {
+    path: '/LoginIndex',
+    name: 'LoginIndex',
+    component: () => import('@/views/login/LoginIndex.vue'),
+  },
 ]
 
 export default routers

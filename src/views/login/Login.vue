@@ -31,7 +31,7 @@ import { reactive, ref } from 'vue'
 import { Avatar, Lock } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import { useUserStore } from '../../store/index'
-
+import router from '@/router'
 const userStore = useUserStore()
 const loginForm = reactive({
   username: '',
@@ -61,6 +61,7 @@ const submitLogin = async () => {
   loading.value = true
   const res = await userStore.login(loginForm)
   console.log(res)
+  router.push('/LoginIndex')
 }
 </script>
 

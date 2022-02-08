@@ -4,7 +4,7 @@ import fetchApi from '../../service/api/login/login'
 export const useUserStore = defineStore({
   id: 'mian',
   state: () => ({
-    name: '超级管理员',
+    name: '',
   }),
   //getters
   getters: {
@@ -13,6 +13,7 @@ export const useUserStore = defineStore({
   actions: {
     async login(params: any) {
       const res = await fetchApi.login(params)
+      this.name = res.data.username
       return res
     },
   },
